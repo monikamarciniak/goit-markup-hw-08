@@ -1,0 +1,20 @@
+@import "./utils/visually-hidden";
+@import "./utils/variables";
+
+@import "../sass/base/common";
+
+@import "../sass/components/backdrop";
+@import "../sass/components/logo";
+@import "../sass/components/_modal-btn";
+@import "../sass/components/modal";
+
+@import "../sass/layout/menu";
+@import "../sass/layout/header";
+@import "../sass/layout/our-benefits";
+@import "../sass/layout/what-we-do";
+@import "../sass/layout/our-team";
+@import "../sass/layout/our-clients";
+@import "../sass/layout/footer";
+
+@import "../sass/pages/portfolio";
+

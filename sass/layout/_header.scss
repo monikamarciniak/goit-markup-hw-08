@@ -1,0 +1,29 @@
+.main__title .container {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/backgroundphoto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 600px;
+    width: 1600px;
+    left: 0px;
+    top: 80px;
+    margin-bottom: 94px;
+}
+
+.main__header {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.364;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--third-color);
+    padding-top: 200px;
+    height: 120px;
+    width: 696px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}

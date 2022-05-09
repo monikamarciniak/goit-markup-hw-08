@@ -1,0 +1,17 @@
+.modal__btn {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    background-color: var(--hover-color);
+    color: var(--third-color);
+    cursor: pointer;
+
+    width: 200px;
+    border-radius: 4px;
+    padding: 10px 35px;
+    margin-left: 700px;
+    margin-top: 100px;
+    box-shadow: 0px 4px  rgba(0, 0, 0, 0.15);
+    border-style: none;
+}
