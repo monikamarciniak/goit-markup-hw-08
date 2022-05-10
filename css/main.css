@@ -139,6 +139,9 @@ img {
   border-style: none;
   display: flex;
   margin: 0 auto;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -627,27 +630,101 @@ label {
   }
 }
 
-.main__title {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/backgroundphoto.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
-  max-width: 1600px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main__title {
+    background-color: var(--background-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/backgroundmobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  .main__header {
+    display: flex;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: var(--third-color);
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 40px;
+  }
 }
 
-.main__header {
-  display: flex;
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.364;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: var(--third-color);
-  width: 1200px;
-  justify-content: center;
-  margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 40px;
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
+  .main__title {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/backgroundmobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .main__title {
+    background-color: var(--background-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/backgroundmobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  .main__header {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: var(--third-color);
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .main__title {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/backgroundmobile.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    background-color: var(--background-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/backgroundphoto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+  }
+  .main__header {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.363;
+    text-align: center;
+    letter-spacing: 0.06em;
+    width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--third-color);
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .main__title {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/backgroundphoto.jpg");
+  }
 }
 
 .benefits .container {
