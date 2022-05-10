@@ -52,10 +52,30 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
-  align-items: center;
-  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
 }
 
 .backdrop {
@@ -264,95 +284,203 @@ label {
 .header .container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 32px;
   border-bottom: 1px solid #ECECEC;
 }
 
-.nav,
-.nav__list,
-.contact__list {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation {
+    display: none;
+    height: 60px;
+  }
+  .nav__list,
+  .contact__list {
+    display: none;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    height: 60px;
+  }
+  .menu-open {
+    display: flex;
+    margin-left: auto;
+    margin-right: 8px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    background: none;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-open:hover,
+  .menu-open:focus {
+    fill: var(--hover-color);
+    cursor: pointer;
+  }
 }
 
-.nav__item {
-  padding-right: 46px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .navigation {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 83px;
+  }
+  .nav__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 46px;
+  }
+  .nav__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--main-color);
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__link:hover,
+  .nav__link:focus {
+    color: var(--hover-color);
+    fill: var(--hover-color);
+  }
+  .current .nav__link::after {
+    position: relative;
+    top: 35px;
+    display: block;
+    justify-content: center;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--hover-color);
+  }
+  .contact__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: auto;
+  }
+  .contact__logo,
+  .contact__logo {
+    margin-right: 8px;
+  }
+  .contact__phone-number,
+  .contact__mail,
+  .contact__logo {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact__phone-number:hover,
+  .contact__phone-number:focus,
+  .contact__mail:hover,
+  .contact__mail:focus,
+  .contact__logo:hover,
+  .contact__logo:focus {
+    color: var(--hover-color);
+    fill: var(--hover-color);
+  }
+  .menu-open {
+    display: none;
+  }
 }
 
-.nav__item:active {
-  color: var(--hover-color);
-}
-
-.nav__item {
-  padding-right: 46px;
-}
-
-.nav__item:last-child {
-  padding-right: 360px;
-}
-
-.header .contact__item {
-  padding-left: auto;
-}
-
-.nav__link,
-.contact__mail,
-.contact__phone-number {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  text-align: left;
-  text-decoration: none;
-  padding-top: 32px;
-}
-
-.nav__link {
-  color: var(--main-color);
-}
-
-.current .nav__link::after {
-  position: relative;
-  top: 38px;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--hover-color);
-  color: var(--hover-color);
-}
-
-.contact__mail,
-.contact__phone-number {
-  color: var(--secondary-color);
-}
-
-.contact__mail {
-  padding-right: 30px;
-}
-
-.nav__link,
-.contact__mail,
-.contact__phone-number,
-.contact__logo {
-  transition: color 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav__link:hover,
-.nav__link:focus,
-.contact__mail:hover,
-.contact__mail:hover + .contact__logo,
-.contact__mail:focus,
-.contact__phone-number:hover,
-.contact__phone-number:hover + .contact__logo,
-.contact__phone-number:focus,
-.contact__logo:hover,
-.contact__logo:focus {
-  color: var(--hover-color);
-  fill: var(--hover-color);
+@media screen and (min-width: 1200px) {
+  .navigation,
+  .nav__list,
+  .contact__list {
+    display: flex;
+  }
+  .nav__item {
+    padding-right: 46px;
+  }
+  .nav__item:active {
+    color: var(--hover-color);
+  }
+  .nav__item {
+    padding-right: 46px;
+  }
+  .nav__item:last-child {
+    padding-right: 360px;
+  }
+  .header .contact__item {
+    padding-left: auto;
+  }
+  .nav__link,
+  .contact__mail,
+  .contact__phone-number {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-decoration: none;
+    padding-top: 32px;
+  }
+  .nav__link {
+    color: var(--main-color);
+  }
+  .current .nav__link::after {
+    position: relative;
+    top: 38px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--hover-color);
+    color: var(--hover-color);
+  }
+  .contact__mail,
+  .contact__phone-number {
+    color: var(--secondary-color);
+  }
+  .contact__mail {
+    padding-right: 30px;
+  }
+  .nav__link,
+  .contact__mail,
+  .contact__phone-number,
+  .contact__logo {
+    transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__link:hover,
+  .nav__link:focus,
+  .contact__mail:hover,
+  .contact__mail:hover + .contact__logo,
+  .contact__mail:focus,
+  .contact__phone-number:hover,
+  .contact__phone-number:hover + .contact__logo,
+  .contact__phone-number:focus,
+  .contact__logo:hover,
+  .contact__logo:focus {
+    color: var(--hover-color);
+    fill: var(--hover-color);
+  }
+  .menu-open {
+    display: none;
+  }
 }
 
 .main__title .container {
