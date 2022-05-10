@@ -1,4 +1,4 @@
-.main__title .container {
+.main__title {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url("../images/backgroundphoto.jpg");
@@ -6,24 +6,21 @@
     background-size: cover;
 
     height: 600px;
-    width: 1600px;
-    left: 0px;
-    top: 80px;
-    margin-bottom: 94px;
+    max-width: 1600px;
+   
 }
 
 .main__header {
+    display: flex;
     font-size: 44px;
     font-weight: 900;
     line-height: 1.364;
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--third-color);
-    padding-top: 200px;
-    height: 120px;
-    width: 696px;
+    width: 1200px;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 40px;
 }

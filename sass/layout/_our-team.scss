@@ -1,16 +1,20 @@
-.our-team .container {
+.our-team {
     background-color: #F5F4FA;
     height: auto;
-    width: auto;
-    margin: 0 auto;
+    max-width: 1600px;
+    align-items: center;
+    left: 0px;
 }
 
 .our-team__list {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 94px;
-    padding-left: 35px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.our-team-item:not(:last-child) {
+    padding-right: 30px;
 }
 
 .our-team__title {
@@ -26,12 +30,12 @@
     background-color: var(--third-color);
     height: 428px;
     width: 270px;
+    left: nullpx;
+    top: nullpx;
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px #00000033;
     box-shadow: 0px 1px 1px 0px #00000024;
     box-shadow: 0px 1px 3px 0px #0000001F;
-    /* padding-bottom: 94px; */
-    margin-right: 30px;
 }
 
 .our-team__name {

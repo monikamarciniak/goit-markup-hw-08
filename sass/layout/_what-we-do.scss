@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     width: 1200px;
+    margin: 0 auto;
 }
 
 .what-we-do__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .what-we-do__item {
@@ -19,13 +19,15 @@
 }
 
 .what-we-do__title {
+    width: 1200px;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.167;
     letter-spacing: 0.03em;
     text-align: center;
     padding-top: 94px;
-    padding-bottom: 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
     align-items: center;
 }
 
