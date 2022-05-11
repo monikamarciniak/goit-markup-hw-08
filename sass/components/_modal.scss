@@ -1,3 +1,150 @@
+@media screen and (min-width:320px) and (max-width:1199px) {
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        min-height: 609px;
+        background-color: var(--third-color);
+        border: 1px solid #0000001A;
+        border-radius: 4px;
+    }
+
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: 1px solid #0000001A;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    
+        .modal__title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: 0.03em;
+            text-align: center;
+            margin: 40px 40px 12px 40px;
+        }
+    
+    
+        input {
+            padding: 12px 30px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            box-sizing: border-box;
+            border-radius: 4px;
+            transition: border;
+        }
+    
+        textarea {
+            resize: none;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.667;
+            letter-spacing: 0.01em;
+            text-align: left;
+            padding: 12px 16px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+    
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 370px;
+    
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.667;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: var(--secondary-color);
+        }
+    
+        .modal__form:focus,
+        .modal__form:focus+.modal__icon,
+        .form__textarea:focus {
+            border-color: var(--hover-color);
+            fill: var(--hover-color);
+            outline: none;
+            transition: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+    
+        .modal__icon {
+            position: absolute;
+            margin-top: 33px;
+            margin-left: 10px;
+        }
+    
+        .form__textarea::placeholder {
+            color: #75757580;
+        }
+    
+        .modal__form-policy-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.714;
+            letter-spacing: 0.03em;
+            text-align: left;
+    
+            &::before {
+                display: inline-block;
+                content: "";
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--main-color);
+                border-radius: 3px;
+                margin-right: 8px;
+            }
+        }
+    
+        .modal__form-policy:checked+.modal__form-policy-text::before {
+            /* background-color: var(--hover-color); */
+            border: 1px solid var(--third-color);
+            background-image: url(../images/iconcheck.jpg);
+            transition: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .modal__form-policy-label {
+            margin-left: 55px;
+        }
+    
+        .form__btn {
+            height: 50px;
+            width: 200px;
+            border-radius: 4px;
+            background-color: var(--hover-color);
+            color: var(--third-color);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border: 1px solid #21212133;
+            cursor: pointer;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .is-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+}
+
+@media screen and (min-width:1200px) {
 .modal {
     position: absolute;
     top: 50%;
@@ -139,4 +286,5 @@ label {
 .is-hidden {
     opacity: 0;
     pointer-events: none;
+}
 }

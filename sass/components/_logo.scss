@@ -27,7 +27,9 @@
     text-align: left;
     text-decoration: none;
     color: var(--third-color);
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 60px;
     
     &--color {

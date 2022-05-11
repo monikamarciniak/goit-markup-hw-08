@@ -85,7 +85,7 @@
         font-size: 34px;
         line-height: 40px;
         letter-spacing: 0.02em;
-        color: var(--icon-color);
+        color: var(--hover-color);
         margin-bottom: 32px;
     }
 
@@ -94,13 +94,13 @@
         font-size: 24px;
         line-height: 1.166;
         letter-spacing: 0.02em;
-        color: var(--icon-color);
+        color: var(--secondary-color);
         margin-bottom: 64px;
     }
 
     .menu-contact__link {
         text-decoration: none;
-        color: var(--icon-color);
+        color: var(--secondary-color);
         margin-left: 40px;
         transition-property: color;
         transition-duration: 250ms;
@@ -133,6 +133,6 @@
 
     .menu-social__link {
         text-decoration: none;
-        color: var(--icon-color);
+        color: var(--hover-color);
     }
 }
