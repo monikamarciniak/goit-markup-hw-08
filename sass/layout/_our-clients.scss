@@ -155,6 +155,7 @@
     .clients .container {
             display: flex;
             max-width: 1200px;
+            justify-content: center;
         }
     
         .clients__title {
@@ -170,7 +171,11 @@
         .client__box {
             width: 170px;
             height: 92px;
-            margin-right: 20px;
+            
+
+            &:not(:last-child){
+                margin-right: 20px;
+            }
         }
     
         .clients__list {

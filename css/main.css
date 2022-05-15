@@ -1138,9 +1138,6 @@ img {
   .what-we-do__item {
     padding-bottom: 94px;
   }
-  .what-we-do__item {
-    padding-right: 30px;
-  }
   .what-we-do__title {
     width: 1200px;
     font-size: 36px;
@@ -1156,13 +1153,14 @@ img {
   .what-we-do__box {
     position: relative;
     overflow: hidden;
+  }
+  .what-we-do__box:not(:last-child) {
     padding-right: 30px;
   }
   .label {
     display: block;
     top: 215px;
     height: 70px;
-    width: 360px;
     background: #2F303ACC;
     font-size: 14px;
     font-weight: 700;
@@ -1358,9 +1356,8 @@ img {
     align-items: center;
     width: 1200px;
     margin: 0 auto;
-    justify-content: space-between;
   }
-  .our-team-item:not(:last-child) {
+  .our-team__item:not(:last-child) {
     padding-right: 30px;
   }
   .our-team__title {
@@ -1571,6 +1568,7 @@ img {
   .clients .container {
     display: flex;
     max-width: 1200px;
+    justify-content: center;
   }
   .clients__title {
     font-size: 36px;
@@ -1584,6 +1582,8 @@ img {
   .client__box {
     width: 170px;
     height: 92px;
+  }
+  .client__box:not(:last-child) {
     margin-right: 20px;
   }
   .clients__list {

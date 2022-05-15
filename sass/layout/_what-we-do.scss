@@ -26,10 +26,6 @@
 
 .what-we-do__item {
     padding-bottom: 94px;
-
-    &:not(:last child) {
-    padding-right: 30px;
-    }
 }
 
 .what-we-do__title {
@@ -48,16 +44,16 @@
 .what-we-do__box {
     position: relative;
     overflow: hidden;
-    padding-right: 30px;
-}
 
+    &:not(:last-child) {
+        padding-right: 30px;
+    }
+}
 
 .label {
     display: block;
     top: 215px;
     height: 70px;
-    width: 360px;
-
     background: #2F303ACC;
     font-size: 14px;
     font-weight: 700;
