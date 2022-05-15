@@ -1000,7 +1000,7 @@ img {
     width: 100%;
     border-radius: 4px;
     justify-content: center;
-    padding: 25px 140px;
+    padding: 25px 190px;
   }
   .our-benefits__icon {
     justify-content: center;
@@ -1517,7 +1517,7 @@ img {
   .client__box {
     width: 170px;
     height: 92px;
-    margin-right: 20px;
+    margin-right: 30px;
     margin-bottom: 30px;
   }
   .clients__list {
